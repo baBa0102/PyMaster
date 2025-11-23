@@ -37,7 +37,7 @@ Getting the game running is quick and easy, as it requires no server-side setup.
     Open your terminal or command prompt and clone the project from GitHub. Remember to replace `[Your Repository URL Here]` with the actual URL of your GitHub repository.
 
     ```bash
-    git clone [Your Repository URL Here]
+    git clone https://github.com/baBa0102/PyMaster.git
     cd PythonZeroToHeroGame  # Navigate into your project folder
     ```
 
