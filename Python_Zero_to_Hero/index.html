@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Zero to Hero: The Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">
+                <h2>🐍 PyMastery</h2>
+                <p>Level: <span id="user-level">1</span>/20</p>
+            </div>
+            <div class="level-map" id="level-map">
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <h1 id="level-title">Level 1: Variables & Memory</h1>
+                <div class="progress-bar">
+                    <div class="fill" id="progress-fill" style="width: 5%"></div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <section id="theory-section" class="card">
+                    <h3>📘 Concept</h3>
+                    <div id="theory-content"></div>
+                    <div class="diagram-box" id="diagram-placeholder">
+                    </div>
+                </section>
+
+                <section id="example-section" class="card">
+                    <h3>🌍 Real World Analogy</h3>
+                    <div id="example-content"></div>
+                </section>
+
+                <section id="challenge-section" class="card interview-mode">
+                    <h3>💼 Interview Room</h3>
+                    <p class="interviewer-text">"Welcome. Let's see if you can apply this. Here is your task:"</p>
+                    <div id="challenge-desc" class="code-problem"></div>
+                    
+                    <div class="editor-area">
+                        <textarea id="code-editor" placeholder="# Write your Python code here..."></textarea>
+                    </div>
+                    
+                    <div class="actions">
+                        <button onclick="checkAnswer()" class="btn-primary">Submit Solution</button>
+                        <button onclick="toggleHint()" class="btn-secondary">Show Hint</button>
+                    </div>
+                    <div id="feedback-area" class="hidden"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer class="main-footer">
+        <p>Basit Shameem | Crafted with html css js  with the splash of python </p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

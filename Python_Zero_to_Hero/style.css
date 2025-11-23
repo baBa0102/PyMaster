@@ -1,0 +1,203 @@
+:root {
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --accent: #10b981;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --code-bg: #000000;
+    --border: #334155;
+    --footer-height: 80px; /* Define a variable for footer height for easy calculation */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    margin: 0;
+    /* Allow body content to flow naturally, enable scrolling if content exceeds viewport */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    display: flex; /* Use flex to make direct children fill vertical space */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    /* Let app-container take all available space, pushing footer down */
+    flex-grow: 1; 
+    /* Set a minimum height to account for the footer, so main content doesn't underlap it */
+    min-height: calc(100vh - var(--footer-height)); 
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #020617;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; /* Sidebar scrolls if many levels are added */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+.logo h2 { color: var(--accent); margin: 0; }
+.level-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 12px;
+    margin-bottom: 8px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.level-btn:hover { border-color: var(--accent); color: white; }
+.level-btn.active { background: var(--accent); color: #000; font-weight: bold; }
+.level-btn.locked { opacity: 0.5; cursor: not-allowed; }
+
+.main-content {
+    flex: 1; /* Allow main-content to take up remaining horizontal space */
+    padding: 30px;
+    overflow-y: auto; /* THIS line enables vertical scrolling for the content area */
+    display: flex; /* Use flexbox for vertical content arrangement */
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex-grow: 1; /* Allow content-wrapper to fill available vertical space */
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+}
+
+h1, h3 { margin-top: 0; }
+
+code, pre, textarea { font-family: 'Fira Code', monospace; }
+.code-snippet { background: var(--code-bg); padding: 10px; border-radius: 6px; color: #fab005; overflow-x: auto; /* For long code lines */ }
+
+.diagram-box {
+    border: 2px dashed var(--text-muted);
+    padding: 20px;
+    text-align: center;
+    margin-top: 15px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    color: var(--accent);
+    font-style: italic;
+    /* Additions for image sizing */
+    display: flex; /* Use flex to center image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Hide anything that overflows */
+}
+
+/* Style for images inside the diagram-box */
+.diagram-box img {
+    max-width: 100%; /* Ensure image doesn't overflow its container */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Remove extra space below image */
+    border-radius: 4px; /* Slightly rounded corners for images */
+}
+
+
+.interview-mode { border-color: var(--accent); }
+.interviewer-text { font-style: italic; color: var(--text-muted); border-left: 3px solid var(--accent); padding-left: 10px; }
+#code-editor {
+    width: 100%;
+    height: 150px;
+    background: var(--code-bg);
+    color: #fff;
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 6px;
+    resize: vertical;
+    box-sizing: border-box; /* Include padding/border in width */
+}
+
+.btn-primary {
+    background: var(--accent);
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+.btn-primary:hover {
+    background-color: #0d9467; /* Slightly darker on hover */
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--text-main);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: border-color 0.2s, color 0.2s;
+}
+.btn-secondary:hover {
+    border-color: var(--accent);
+    color: white;
+}
+
+.hidden { display: none; }
+.success { color: var(--accent); margin-top: 10px; }
+.error { color: #ef4444; margin-top: 10px; }
+
+.main-footer {
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+    text-align: center;
+    padding: 20px;
+    /* Use the variable defined in :root for height */
+    height: var(--footer-height); 
+    display: flex; /* Use flex to center text vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-size: 0.9em;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    box-sizing: border-box; /* Include padding in width and height */
+    /* Remove margin-top as it's handled by body's flex layout */
+    /* margin-top: 40px; */ 
+}
+
+.main-footer p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
+/* Ensure code snippets in theory section wrap if needed */
+#theory-content pre {
+    white-space: pre-wrap; /* Allows text to wrap */
+    word-wrap: break-word; /* Breaks long words if necessary */
+}
+
+/* Basic responsiveness for smaller screens (optional, but good practice) */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column; /* Stack sidebar and main content vertically */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto; /* Allow sidebar to adjust height */
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
