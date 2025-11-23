@@ -505,8 +505,8 @@ print(say_hello("World"))
       challenge: "Create a simple decorator named <code>uppercase_decorator</code> that takes a function (expected to return a string), converts its result to uppercase, and returns the modified result. Apply this decorator to a function <code>get_message()</code> that returns 'hello python'. Then call <code>get_message()</code> and print the result.",
       expected_keywords: ["def", "uppercase_decorator", "func", "wrapper", "result", "func()", "return", "result.upper()", "@uppercase_decorator", "get_message", "hello python"],
       hint: "Your wrapper function should call the original `func`, get its result, convert it to uppercase, and then return the uppercase result."
-    } // <--- NO COMMA HERE if this is the last item in the array
-  ]; // <-- Array closure is correct here
+    } 
+  ]; // <-- Array closure 
 
   return levels;
 }));
