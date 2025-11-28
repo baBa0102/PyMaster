@@ -1,7 +1,6 @@
 # Python Zero to Hero: The Game 🐍
 
-![Python Zero to Hero Banner](https://via.placeholder.com/1200x400/10b981/0f172a?text=Python+Zero+to+Hero+Game+-+Learn+Code+Play)
-* <img width="1660" height="956" alt="Screenshot 2025-11-29 at 3 00 09 AM" src="https://github.com/user-attachments/assets/54658d8d-ef4a-45af-9029-b749fc9bd2fb" /> *
+<img width="1660" height="956" alt="Screenshot 2025-11-29 at 3 00 09 AM" src="https://github.com/user-attachments/assets/54658d8d-ef4a-45af-9029-b749fc9bd2fb" /> 
 
 An **interactive, browser-based game** designed to make learning and reinforcing Python programming concepts fun, visual, and engaging. Progress through 20 levels, solving coding challenges and mastering core principles from variables to decorators.
 
