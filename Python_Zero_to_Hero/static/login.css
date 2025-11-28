@@ -1,0 +1,118 @@
+/* login.css - Specific styles for the login page */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-dark); /* Re-use from main style.css */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Max width for the login card */
+}
+
+.login-card {
+    background: var(--bg-card); /* Re-use from main style.css */
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid var(--border); /* Re-use from main style.css */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Make card fill its container */
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.login-title {
+    color: var(--accent); /* Re-use from main style.css */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-main); /* Re-use from main style.css */
+    font-weight: 600;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--code-bg); /* Use code-bg for input fields */
+    color: var(--text-main);
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: border-color 0.2s;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* Re-using existing button styles */
+.login-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.feedback-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.feedback-message.error {
+    background-color: rgba(239, 68, 68, 0.2); /* #ef4444 with transparency */
+    color: #ef4444; /* Error red */
+    border: 1px solid #ef4444;
+}
+
+.feedback-message.success {
+    background-color: rgba(16, 185, 129, 0.2); /* #10b981 with transparency */
+    color: var(--accent); /* Success green */
+    border: 1px solid var(--accent);
+}
+
+.toggle-form-text {
+    text-align: center;
+    margin-top: 25px;
+    color: var(--text-muted);
+    font-size: 0.9em;
+}
+
+.toggle-form-text a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.toggle-form-text a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}

@@ -172,7 +172,11 @@ code, pre, textarea { font-family: 'Fira Code', monospace; }
     /* Remove margin-top as it's handled by body's flex layout */
     /* margin-top: 40px; */ 
 }
-
+.feedback-area.info {
+    background-color: rgba(67, 185, 239, 0.2);
+    color: #43b9ef;
+    border: 1px solid #43b9ef;
+}
 .main-footer p {
     margin: 0; /* Remove default paragraph margin */
 }

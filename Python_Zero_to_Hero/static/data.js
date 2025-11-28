@@ -25,7 +25,7 @@ pi_value = 3.14       # Float (float)
             </pre>
             <p>Variables must start with a letter or an underscore and are case-sensitive.</p>
         `,
-      diagram_alt:'<img src="assets/images/level1.png" alt="Conceptual diagram of variables in memory. Labeled boxes \'player_name\', \'score\', \'is_alive\', \'pi_value\' point to data types like String, Integer, Boolean, Float, illustrating dynamic typing in Python.">',
+      diagram_alt:'<img src="static/assets/images/level1.png" alt="Conceptual diagram of variables in memory. Labeled boxes \'player_name\', \'score\', \'is_alive\', \'pi_value\' point to data types like String, Integer, Boolean, Float, illustrating dynamic typing in Python.">',
       real_life: "Imagine a warehouse. 'score' is a sticker on a box. Inside the box is the number 100. If you change the score, you take 100 out and put 200 in.",
       challenge: "Create a variable named <code>hero</code> and assign it the string value 'Batman'. Then create an integer variable <code>power</code> with value 99.",
       expected_keywords: ["hero", "batman", "power", "99"],
@@ -55,7 +55,7 @@ else:
 
 </p>
         `,
-      diagram_alt: '<img src="assets/images/level2.png" alt="Flowchart showing decision points in code logic.">',
+      diagram_alt: '<img src="static/assets/images/level2.png" alt="Flowchart showing decision points in code logic.">',
       real_life: "Like a traffic light. IF light is Red: Stop. ELSE IF light is Yellow: Slow down. ELSE: Go.",
       challenge: "Write an if statement that checks if the variable <code>age</code> is greater than or equal to 18. If true, print the string 'Adult'.",
       expected_keywords: ["if", "age", ">=", "18", "print", "adult"],
@@ -73,7 +73,7 @@ for i in range(5):
             </pre>
             <p><strong>While Loops:</strong> Repeat as long as a specified condition is true.</p>
         `,
-      diagram_alt: '<img src="assets/images/level3.png" alt="Visual representation of loop iterations.">',
+      diagram_alt: '<img src="static/assets/images/level3.png" alt="Visual representation of loop iterations.">',
       real_life: "Like a factory conveyor belt. The machine performs the exact same action on every item that passes through.",
       challenge: "Write a loop that prints the string 'Hello' 10 times using the <code>range</code> function.",
       expected_keywords: ["for", "in", "range", "10", "print", "hello"],
@@ -93,7 +93,7 @@ message = greet("Basit")
             </pre>
             <p>Functions that don't explicitly use <code>return</code> implicitly return <code>None</code>.</p>
         `,
-      diagram_alt: '<img src="assets/images/level4.png" alt="Diagram illustrating function calls and returns.">',
+      diagram_alt: '<img src="static/assets/images/level4.png" alt="Diagram illustrating function calls and returns.">',
       real_life: "A function is like a kitchen appliance (a toaster). You give it an input (bread), it does a task (toasts), and gives you an output (toast).",
       challenge: "Define a function called <code>add_numbers</code> that takes two arguments, <code>a</code> and <code>b</code>, and returns their sum (<code>a + b</code>).",
       expected_keywords: ["def", "add_numbers", "a", "b", "return", "+"],
@@ -111,7 +111,7 @@ fruits.append("orange")
 print(fruits[0]) # Output: apple
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level5.png" alt="Visual representation of a list and its elements.">',
+      diagram_alt: '<img src="static/assets/images/level5.png" alt="Visual representation of a list and its elements.">',
       real_life: "A grocery list. It's ordered (you know the first item) and changeable (you can add or cross off items).",
       challenge: "Create a list named <code>scores</code> with the values <code>[80, 90, 75]</code>. Then, use a method to append the number <code>95</code> to the end of the list.",
       expected_keywords: ["scores", "[", "]", "80", "append", "95"],
@@ -129,7 +129,7 @@ coordinates = (10.0, 20.5)
 print(coordinates[0])
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level6.png" alt="Image comparing python list vs tuple structure with emphasis on mutability">',
+      diagram_alt: '<img src="static/assets/images/level6.png" alt="Image comparing python list vs tuple structure with emphasis on mutability">',
       real_life: "A compass direction. Once set, the coordinates (Latitude, Longitude) of a point should never change, ideal for a tuple.",
       challenge: "Create a tuple named <code>rgb_color</code> representing the color red: <code>(255, 0, 0)</code>. Print the element at index 0.",
       expected_keywords: ["rgb_color", "(", ")", "255", "0", "print", "rgb_color[0]"],
@@ -150,7 +150,7 @@ print(user["name"])
 user["level"] = 8 # Changing a value
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level7.png" alt="Diagram illustrating key-value pairs in a dictionary.">',
+      diagram_alt: '<img src="static/assets/images/level7.png" alt="Diagram illustrating key-value pairs in a dictionary.">',
       real_life: "A phone book. You look up a person's name (the **key**) to find their phone number (the **value**).",
       challenge: "Create a dictionary named <code>item</code> with a key <code>'price'</code> and a value of <code>49.99</code>. Then, change the price value to <code>39.99</code>.",
       expected_keywords: ["item", "{", "price", "49.99", "39.99"],
@@ -168,7 +168,7 @@ print(numbers) # Output: {1, 2, 3, 4}
 numbers.add(5)
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level8.png" alt="Image comparing python dictionary vs set syntax and use cases">',
+      diagram_alt: '<img src="static/assets/images/level8.png" alt="Image comparing python dictionary vs set syntax and use cases">',
       real_life: "A class roster. Each student's name must be unique. If you try to add a duplicate, it's ignored, ensuring only unique names remain.",
       challenge: "Create a set named <code>unique_ids</code> with values <code>{101, 102, 102, 103}</code>. Use the <code>print()</code> function to display the resulting set.",
       expected_keywords: ["unique_ids", "{", "101", "102", "103", "print"],
@@ -187,7 +187,7 @@ parts = text.split(" ")
             </pre>
             <p>The **f-string** (formatted string literal) provides an easy way to embed expressions inside string literals.</p>
         `,
-      diagram_alt: '<img src="assets/images/level9.png" alt="Diagram illustrating string manipulation techniques in Python.">',
+      diagram_alt: '<img src="static/assets/images/level9.png" alt="Diagram illustrating string manipulation techniques in Python.">',
       real_life: "Editing a Word document. You can change text to all caps, or find and replace instances of a word without damaging the core document.",
       challenge: "Take the string <code>data = 'hello,world,python'</code> and use the <code>.split()</code> method to break it into a list using the comma (<code>,</code>) as a delimiter.",
       expected_keywords: ["data", "split", ","],
@@ -215,7 +215,7 @@ except ZeroDivisionError:
             </pre>
             <p>You can specify the type of error (like <code>ZeroDivisionError</code>) or catch all errors with a generic <code>except:</code>.</p>
         `,
-      diagram_alt: '<img src="assets/images/level10.png" alt="Flowchart showing the process of a try-except block.">',
+      diagram_alt: '<img src="static/assets/images/level10.png" alt="Flowchart showing the process of a try-except block.">',
       real_life: "A fire alarm system. The alarm is ignored unless a fire (error) occurs, in which case the system executes the pre-planned response (except block).",
       challenge: "Write a <code>try/except</code> block to safely convert the string <code>'abc'</code> to an integer using <code>int('abc')</code>. The <code>except</code> block should print the string 'Invalid input'. (This conversion causes a <code>ValueError</code>).",
       expected_keywords: ["try", "except", "valueerror", "int('abc')", "print", "invalid input"],
@@ -241,7 +241,7 @@ print(dog1.species)
             </pre>
             <p>Class names should follow the **PascalCase** convention (e.g., <code>MyClass</code>). </p>
         `,
-      diagram_alt: '<img src="assets/images/level11.png" alt="Image of a python class blueprint showing attributes and methods">',
+      diagram_alt: '<img src="static/assets/images/level11.png" alt="Image of a python class blueprint showing attributes and methods">',
       real_life: "A cookie cutter is the **Class**. The dozens of actual cookies you bake are the **Objects** (Instances).",
       challenge: "Define a class named <code>Car</code>. Inside the class, set a **class attribute** called <code>wheels</code> equal to the number 4.",
       expected_keywords: ["class", "car", "wheels", "4"],
@@ -262,7 +262,7 @@ class Player:
 player1 = Player("Zoe", 100)
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level12.png" alt="Diagram illustrating the __init__ method and instance attributes.">',
+      diagram_alt: '<img src="static/assets/images/level12.png" alt="Diagram illustrating the __init__ method and instance attributes.">',
       real_life: "When you buy a car (creating an object), the factory's assembly line (the constructor) automatically sets its unique color, VIN, and engine size.",
       challenge: "In the <code>Car</code> class, define the <code>__init__</code> method that accepts the parameter <code>color</code> and assigns it to a **self attribute** called <code>self.color</code>.",
       expected_keywords: ["def", "__init__", "self", "color", "self.color", "="],
@@ -286,7 +286,7 @@ my_dog = Dog("Buddy")
 print(my_dog.bark())
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level13.png" alt="Image illustrating a python object\'s methods and attributes">',
+      diagram_alt: '<img src="static/assets/images/level13.png" alt="Image illustrating a python object\'s methods and attributes">',
       real_life: "The car object has attributes (color, model) and methods like <code>start_engine()</code> and <code>brake()</code> that it can execute.",
       challenge: "Add a method called <code>get_info</code> to the <code>Car</code> class. This method should simply **return** the string 'This is a car'.",
       expected_keywords: ["def", "get_info", "self", "return", "this is a car"],
@@ -304,7 +304,7 @@ print(my_dog.bark())
                 <li>**"Private" (Double Underscore \`__\`):** Triggers name mangling, making it harder, but not impossible, to access externally.</li>
             </ul>
         `,
-      diagram_alt: '<img src="assets/images/level14.png" alt="Image illustrating data hiding and encapsulation in OOP">',
+      diagram_alt: '<img src="static/assets/images/level14.png" alt="Image illustrating data hiding and encapsulation in OOP">',
       real_life: "The inner workings of an ATM (your account balance) are encapsulated. You can't directly change the balance; you must use authorized methods (`deposit()` or `withdraw()`).",
       challenge: "Create a class <code>Settings</code> and define an attribute <code>_admin_key</code> with the value 'access'. Use the single underscore prefix (Protected Convention).",
       expected_keywords: ["class", "settings", "_admin_key", "access"],
@@ -329,7 +329,7 @@ my_cat = Cat()
 my_cat.eat() # Inherited method
             </pre>
         `,
-      diagram_alt: '<img src="assets/images/level15.png" alt="Image illustrating inheritance hierarchy with parent and child classes">',
+      diagram_alt: '<img src="static/assets/images/level15.png" alt="Image illustrating inheritance hierarchy with parent and child classes">',
       real_life: "In biology, 'Mammal' is the Parent Class. 'Dog', 'Cat', and 'Human' are Subclasses. They all inherit the methods of 'Mammal' like `breathe()` and `give_birth()`.",
       challenge: "Create a Parent class named <code>Weapon</code> with a method <code>attack</code> that prints the string 'Base attack'. Then create a Child class named <code>Sword</code> that inherits from <code>Weapon</code>.",
       expected_keywords: ["class", "weapon", "def", "attack", "print", "sword", "(weapon)"],
@@ -360,7 +360,7 @@ for animal in animals:
             </pre>
             <p>Here, the <code>speak()</code> method is called on each object, but it behaves differently based on the object's actual type. This promotes flexibility and code reusability.</p>
         `,
-      diagram_alt: '<img src="assets/images/level16.png" alt="Diagram illustrating polymorphism where different animal objects (Dog, Cat) respond to a common speak() method with their unique sounds.">',
+      diagram_alt: '<img src="static/assets/images/level16.png" alt="Diagram illustrating polymorphism where different animal objects (Dog, Cat) respond to a common speak() method with their unique sounds.">',
       real_life: "Imagine a universal remote control. You can press the 'Power' button, and it turns on different brands of TVs, each responding in its own way to the same 'Power' signal.",
       challenge: "Create a base class <code>Shape</code> with a method <code>area()</code> that returns 0. Then create a child class <code>Circle</code> that inherits from <code>Shape</code> and overrides the <code>area()</code> method to return <code>3.14 * radius * radius</code>. Assume <code>Circle</code>'s constructor takes a `radius`.",
       expected_keywords: ["class", "Shape", "def", "area", "return", "Circle", "(Shape)", "radius", "3.14"],
@@ -394,7 +394,7 @@ print(my_car.honk())
             </pre>
             <p>An abstract class cannot be instantiated directly, and any concrete (non-abstract) subclass must provide implementations for all abstract methods defined in its abstract parent.</p>
         `,
-      diagram_alt: '<img src="assets/images/level17.png" alt="Diagram illustrating abstraction: a Vehicle abstract class with an abstract drive() method and a concrete honk() method. A Car concrete class implements drive(), hiding the complex driving mechanics.">',
+      diagram_alt: '<img src="static/assets/images/level17.png" alt="Diagram illustrating abstraction: a Vehicle abstract class with an abstract drive() method and a concrete honk() method. A Car concrete class implements drive(), hiding the complex driving mechanics.">',
       real_life: "When you drive a car, you use the steering wheel and pedals (the interface). You don't need to understand the complex internal combustion engine or transmission mechanics (the hidden implementation details).",
       challenge: "Create an abstract base class <code>Logger</code> with an abstract method <code>log(message)</code>. Then create a concrete class <code>ConsoleLogger</code> that inherits from <code>Logger</code> and implements <code>log(message)</code> to print the message to the console.",
       expected_keywords: ["from", "abc", "import", "ABC", "abstractmethod", "class", "Logger", "(ABC)", "@abstractmethod", "def", "log", "pass", "ConsoleLogger", "(Logger)", "print", "message"],
@@ -428,7 +428,7 @@ with open("my_notes.txt", "r") as file:
             </pre>
             <p>It's best practice to use the <code>with</code> statement, which ensures the file is automatically closed, even if errors occur.</p>
         `,
-      diagram_alt: '<img src="assets/images/level18.png" alt="Diagram illustrating file I/O operations. Arrows show data flowing from Python script to a \'my_notes.txt\' file for \'write\' and \'append\', and from the file back to the script for \'read\'.">',
+      diagram_alt: '<img src="static/assets/images/level18.png" alt="Diagram illustrating file I/O operations. Arrows show data flowing from Python script to a \'my_notes.txt\' file for \'write\' and \'append\', and from the file back to the script for \'read\'.">',
       real_life: "Like writing a diary (writing to a file) or reading a recipe book (reading from a file). The file persists the information.",
       challenge: "Write a Python script that first writes the string 'Hello, Python!' into a file named <code>greeting.txt</code>, and then reads the content of <code>greeting.txt</code> and prints it to the console.",
       expected_keywords: ["with", "open", "greeting.txt", "w", "as", "file", "file.write", "Hello, Python!", "r", "content", "file.read", "print", "content"],
@@ -466,7 +466,7 @@ print(helper.add(5, 3))
             </pre>
             <p>Modules and packages are essential for building larger, maintainable Python applications.</p>
         `,
-      diagram_alt: '<img src="assets/images/level19.png" alt="Diagram showing a Python project structure: \'project_root/\' containing \'main.py\', \'my_module.py\', and a \'my_package/\' directory with \'__init__.py\' and a \'utils/\' sub-package.">',
+      diagram_alt: '<img src="static/assets/images/level19.png" alt="Diagram showing a Python project structure: \'project_root/\' containing \'main.py\', \'my_module.py\', and a \'my_package/\' directory with \'__init__.py\' and a \'utils/\' sub-package.">',
       real_life: "Think of a cookbook. Each recipe is a 'module' (focused on one dish). The entire cookbook is a 'package' that groups related recipes (modules) together.",
       challenge: "Imagine you have a module named `math_operations.py` with a function `multiply(a, b)` that returns `a * b`. Write a Python script that imports this function and uses it to multiply 7 by 8, printing the result.",
       expected_keywords: ["import", "from", "math_operations", "multiply", "print", "7", "8"],
@@ -500,7 +500,7 @@ print(say_hello("World"))
             </pre>
             <p>Decorators are commonly used for logging, timing, authentication, caching, and more, allowing for clean, reusable code enhancements.</p>
         `,
-      diagram_alt: '<img src="assets/images/level20.png" alt="Diagram illustrating Python decorators: A \'logger_decorator\' function wraps around another function \'add()\', adding logging capabilities before and after the \'add()\' function execution.">',
+      diagram_alt: '<img src="static/assets/images/level20.png" alt="Diagram illustrating Python decorators: A \'logger_decorator\' function wraps around another function \'add()\', adding logging capabilities before and after the \'add()\' function execution.">',
       real_life: "Like putting a gift wrapper around a present. The present itself (the function) remains the same, but the wrapper (the decorator) adds extra flair or functionality (e.g., logging, timing).",
       challenge: "Create a simple decorator named <code>uppercase_decorator</code> that takes a function (expected to return a string), converts its result to uppercase, and returns the modified result. Apply this decorator to a function <code>get_message()</code> that returns 'hello python'. Then call <code>get_message()</code> and print the result.",
       expected_keywords: ["def", "uppercase_decorator", "func", "wrapper", "result", "func()", "return", "result.upper()", "@uppercase_decorator", "get_message", "hello python"],
