@@ -7,14 +7,21 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 
 # Load environment variables from .env file
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env'))
-
+IS_PROD = os.getenv('IS_PRODUCTION', 'False').lower() in ('true', '1', 't')
+# --- Flask App Configuration ---
 app = Flask(__name__, static_folder='../static', static_url_path='/static')
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key_if_not_set') # Fallback for local testing
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SECURE'] = IS_PROD
 app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_host=1, x_port=1, x_prefix=1)
+
+# ProxyFix is ONLY needed in production (PythonAnywhere) to correctly handle HTTPS headers
+if IS_PROD:
+    from werkzeug.middleware.proxy_fix import ProxyFix
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_host=1, x_port=1, x_prefix=1)
+# Note: The 'ProxyFix' is removed from the non-conditional block, preventing errors locally.
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
